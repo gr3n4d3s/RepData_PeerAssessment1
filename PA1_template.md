@@ -1,8 +1,9 @@
 # Reproducible Research: Peer Assessment 1
-
+##firstly
+I spent most of my time coding and trying to satisfy the assignment not designing aesthetics for the charts. thanks for looking.
 
 ## Loading and preprocessing the data
-Here we'll download and load the data and any packages used. also we'll run analysis on the data to get desired results
+Here we'll download and load the data and any packages used. also we'll run analysis on the data to get desired results.  I like using code that will download the data itself.
 
 ```r
 library(ggplot2)
@@ -156,6 +157,6 @@ act_data$wkendday<- as.factor(ifelse(act_data$day %in% c("Saturday", "Sunday"), 
 ggplot(act_data, aes(x=interval, y=steps))+ stat_summary(fun.y = "mean", geom = "line")+ facet_grid(.~wkendday)
 ```
 
-![](PA1_template_files/figure-html/echo-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 

@@ -4,10 +4,11 @@ output:
   html_document:
     keep_md: true
 ---
-
+##firstly
+I spent most of my time coding and trying to satisfy the assignment not designing aesthetics for the charts. thanks for looking.
 
 ## Loading and preprocessing the data
-Here we'll download and load the data and any packages used. also we'll run analysis on the data to get desired results
+Here we'll download and load the data and any packages used. also we'll run analysis on the data to get desired results.  I like using code that will download the data itself.
 ```{r echo=TRUE}
 library(ggplot2)
 library(dplyr)
@@ -61,7 +62,7 @@ summary(day_data$sum_steps)
 
 ## Are there differences in activity patterns between weekdays and weekends?
 This part was easily the hardest for me... but what i did here was remove all the na's from steps in the original data frame and replace them with the **median values not mean**. then added weekday names to the data frame and evaluated them to be either weekends or weekdays. finally i somehow managed to use ggplot to both plot and run the necessary stats.
-```{r echo}
+```{r echo = TRUE}
 #replace na's with median values
 act_data$steps[which(is.na(act_data$steps))]<-median(act_data$steps, na.rm = TRUE)
 #firstly chang the date format to "date" from "factor"
